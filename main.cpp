@@ -5,10 +5,10 @@ typedef void (*func_ptr)();
 
 int main()
 {
-//	func();
-
-	void* handle = dlopen("libtest.dylib", RTLD_NOW);
-	auto func = (func_ptr)dlsym(handle, "func");
 	func();
+
+//	void* handle = dlopen("./libtest.so", RTLD_NOW);
+//	auto func = (func_ptr)dlsym(handle, "func");
+//	func();
 	return 0;
 }
